@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title
+  .grid
+    each val in data.data
+      div
+        .crypto= val.symbol 
+        if val.quotes.USD.percent_change_24h > 0
+          .green.pc24= '%' + val.quotes.USD.percent_change_24h
+        else
+          .red.pc24= val.quotes.USD.percent_change_24h
+        .price= val.quotes.USD.price
+  
+        
+     
+  br
+  form(action="/" method="POST")
+    button(type="submit") Refresh

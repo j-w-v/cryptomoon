@@ -1,0 +1,26 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Noto Sans', sans-serif;
+  background:#F5F6FA;
+
+}
+
+a {
+  color: #00B7FF;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5px;
+  
+}
+
+
+
+.grid .crypto, .grid .pc24{
+  display:inline-block;
+  margin-left:10px;
+}
+

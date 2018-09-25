@@ -4,10 +4,11 @@ var request = require('request-promise');
 
   exports.crypto_all = function(req, res, next) {
         request({
-            uri: 'https://api.coinmarketcap.com/v2/ticker/?convert=GBP',
+            uri: 'https://api.coinmarketcap.com/v2/ticker/',
             qs: {
-              limit: 15,
-              convert: 'GBP',
+              sort:'rank',
+              limit:100,
+              
             },
             json: true
           })

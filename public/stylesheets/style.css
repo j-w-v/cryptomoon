@@ -17,10 +17,19 @@ a {
   
 }
 
+
 .grid div{
-  background:white;
+ /*  background: #fff; */
   max-width: 350px;
   padding:5px;
+}
+
+.cryptos{
+  background: #ffdcdc7a;
+}
+
+.cryptos.up{
+  background:#cbf9dc7a;
 }
 
 .grid .crypto, .grid .pc24{
@@ -34,7 +43,7 @@ a {
 }
 
 .grid .crypto{
-  font-size:20px;
+  font-size:13px;
   font-weight: bold;
 }
 
@@ -46,6 +55,11 @@ a {
 
 nav {
   text-align: center;
+}
+
+nav ul {
+  margin: 0px;
+  padding: 0px;
 }
 
 nav ul li {

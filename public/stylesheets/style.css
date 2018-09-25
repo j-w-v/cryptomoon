@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   font-family: 'Noto Sans', sans-serif;
   background:#F5F6FA;
@@ -12,15 +11,60 @@ a {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 5px;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(2, 100px);  
   
 }
 
-
+.grid div{
+  background:white;
+  max-width: 350px;
+  padding:5px;
+}
 
 .grid .crypto, .grid .pc24{
   display:inline-block;
   margin-left:10px;
 }
 
+.grid .pc24 {
+  float: right;
+  font-size: 15px;
+}
+
+.grid .crypto{
+  font-size:20px;
+  font-weight: bold;
+}
+
+.grid .price{
+  font-size:25px;
+  font-weight: bold;
+  text-align:center;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+    margin-left: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.red{
+  color:#d94040;
+}
+
+.green{
+  color:#009e73;
+}

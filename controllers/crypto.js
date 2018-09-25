@@ -4,7 +4,7 @@ var request = require('request-promise');
 
   exports.crypto_all = function(req, res, next) {
         request({
-            uri: 'https://api.coinmarketcap.com/v2/ticker/?sort=percent_change_24h&convert=GBP',
+            uri: 'https://api.coinmarketcap.com/v2/ticker/?convert=GBP',
             qs: {
               limit: 15,
               convert: 'GBP',

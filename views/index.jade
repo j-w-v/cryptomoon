@@ -2,24 +2,30 @@ extends layout
 
 block content
   h1= title
+  .count 
+    .mooning
+    .notMooning
   .grid
     each val in data.data
-      if val.quotes.USD.percent_change_24h > 0
+      if val.quotes.GBP.percent_change_24h > 0
         .cryptos.up
           .crypto= val.name 
-          if val.quotes.USD.percent_change_24h > 0 
-            .green.pc24= val.quotes.USD.percent_change_24h + '%'
+          if val.quotes.GBP.percent_change_24h > 0 
+            .green.pc24= val.quotes.GBP.percent_change_24h + '%'
+            
           else
-            .red.pc24= val.quotes.USD.percent_change_24h + '%'
-          .price= "£" + val.quotes.USD.price.toFixed(2)
-      if val.quotes.USD.percent_change_24h < 0
+            .red.pc24= val.quotes.GBP.percent_change_24h + '%'
+          .price= "£" + val.quotes.GBP.price.toFixed(2)
+          a(href="/cryptos/" + val.name + '/' + val.id) link
+      if val.quotes.GBP.percent_change_24h < 0
         .cryptos.down
           .crypto= val.name 
-          if val.quotes.USD.percent_change_24h > 0 
-            .green.pc24= val.quotes.USD.percent_change_24h + '%'
+          if val.quotes.GBP.percent_change_24h > 0 
+            .green.pc24= val.quotes.GBP.percent_change_24h + '%'
           else
-            .red.pc24= val.quotes.USD.percent_change_24h + '%'
-          .price= "£" + val.quotes.USD.price.toFixed(2)
+            .red.pc24= val.quotes.GBP.percent_change_24h + '%'
+          .price= "£" + val.quotes.GBP.price.toFixed(2)
+          a(href="/cryptos/" + val.name + '/' + val.id) link
   
         
      

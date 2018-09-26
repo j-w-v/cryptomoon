@@ -9,6 +9,7 @@ router.get('/', cryptoCalls.crypto_all);
 
 router.post('/', cryptoCalls.all_refresh);
 router.get('/about', cryptoCalls.about);
+router.get('/cryptos/:name/:id', cryptoCalls.crypto_detail);
 
 
 

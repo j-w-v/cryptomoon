@@ -13,22 +13,23 @@ a {
   display: grid;
     grid-gap: 5px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(2, 100px);  
-  
+    grid-template-rows: repeat(17, 100px);  
+    
 }
 
 
 .grid div{
  /*  background: #fff; */
-  max-width: 350px;
   padding:5px;
+  -webkit-animation: scale-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .cryptos{
   background: #ffdcdc7a;
 }
 
-.cryptos.up{
+.cryptos.up , .up{
   background:#cbf9dc7a;
 }
 
@@ -82,3 +83,46 @@ nav ul li a {
 .green{
   color:#009e73;
 }
+
+.mooning, .notMooning{
+  justify-self: end;
+}
+
+.count {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@-webkit-keyframes scale-in-top {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-top {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+}
+
